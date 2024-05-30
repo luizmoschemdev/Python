@@ -1,6 +1,6 @@
 #calculadora em python#
 
-op = int(input("Escolha a operação 1. SOMA 2. SUBTRAÇÃO 3. MULTIPLICAÇÃO 4. DIVISÃO 5. PORCENTAGEM"))
+op = int(input("Escolha a operação 1. SOMA 2. SUBTRAÇÃO 3. MULTIPLICAÇÃO 4. DIVISÃO 5. PORCENTAGEM "))
 
 if op == 1:
     n1 = float (input("Digite um número: "))
