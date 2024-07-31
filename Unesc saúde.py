@@ -1,4 +1,5 @@
 nome_do_paciente = (input("Escreva seu nome: "))
 alt_paciente = float (input("Digite sua altura: "))
 peso_paciente =  float (input("Digite seu peso: "))
-print(f"Bem vindo ao Unesc saúde", f"{nome_do_paciente}!", f"sua altura é: {alt_paciente}",f"e seu peso é: {peso_paciente}")
+imc = peso_paciente / (alt_paciente **2)
+print(f"Bem vindo ao Unesc saúde", f"{nome_do_paciente}!", f"seu IMC é: {imc:.2f}")
