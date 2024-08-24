@@ -5,12 +5,13 @@ def welcome ():
           """)
 
 def return_menu ():
-    back__menu = input("Deseja retornar ao menu principal? (S/N): ").upper
+    back__menu = input("Deseja retornar ao menu principal? (S/N): ").upper()
     match back__menu:
         case "S" | "s":
-            return False
-        case "N" | "n":
             return True
+        case "N" | "n":
+            print ("Obrigado por usar o Unesc app!")
+            return False
         
 
 def show_menu (): 
@@ -37,6 +38,9 @@ def show_menu ():
             case 4: 
                 calc_cilinder()
                 go_back_menu = return_menu()
+            case 5:
+                print ("Obrigado por usar o Unesc app!")
+                go_back_menu = False
             case _:
                   print ("Opção inválida.")             
                 
