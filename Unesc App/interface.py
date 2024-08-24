@@ -6,11 +6,12 @@ def welcome ():
 
 def return_menu ():
     back__menu = input("Deseja retornar ao menu principal?(S/N): ").upper
-    if back__menu != 'S':
-            print ("Obrigado por utilizar o Unesc app!")
+    match back__menu != 's':
+        case "S" | "s":
             return False
-    else:
+        case "N" | "n":
             return True
+        
 
 def show_menu (): 
     go_back_menu = True
@@ -21,7 +22,7 @@ def show_menu ():
                 3 - Calcular área de um triângulo
                 4 - Calcular área de um cilindro
                 5 - Sair""")
-        option = int ("Escolha uma opção. ")
+        option = int (input("Escolha uma opção."))
 
         match option:
             case 1: 
