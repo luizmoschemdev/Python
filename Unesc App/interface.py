@@ -5,8 +5,8 @@ def welcome ():
           """)
 
 def return_menu ():
-    back__menu = input("Deseja retornar ao menu principal?(S/N): ").upper
-    match back__menu != 's':
+    back__menu = input("Deseja retornar ao menu principal? (S/N): ").upper
+    match back__menu:
         case "S" | "s":
             return False
         case "N" | "n":
@@ -22,7 +22,7 @@ def show_menu ():
                 3 - Calcular área de um triângulo
                 4 - Calcular área de um cilindro
                 5 - Sair""")
-        option = int (input("Escolha uma opção."))
+        option = int (input("Escolha uma opção. "))
 
         match option:
             case 1: 
