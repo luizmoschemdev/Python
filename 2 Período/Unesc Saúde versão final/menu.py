@@ -1,5 +1,14 @@
 from calcs import calcular_imc, calcular_taxa_basal
 
+def coletar_dados():
+    nome_do_paciente: str = input("Digite seu nome: ")
+    altura_do_paciente = float(input("Digite sua altura: "))
+    peso_do_paciente = float(input("Digite seu peso: "))
+    idade_do_paciente = int(input("Digite sua idade (em anos): "))
+    genero_biologico = input("Digite seu gênero biológico (M/F): ").upper()#coloca todas as letra em maiusculo
+    dados_pacientes =  [nome_do_paciente, altura_do_paciente, peso_do_paciente, idade_do_paciente, genero_biologico]
+    return
+
 def boas_vindas() :
     print("""Bem-vindo ao Unesc Saúde   
             """)
