@@ -22,7 +22,7 @@ def retorno_menu ():
         else :
                     return True
         
-def mostrar_menu(altura_do_paciente, peso_do_paciente, idade_do_paciente, genero_biologico):               
+def mostrar_menu(*dados_pacientes):             
         voltar_ao_menu = True
         while voltar_ao_menu == True :
             print("""MENU
@@ -33,11 +33,10 @@ def mostrar_menu(altura_do_paciente, peso_do_paciente, idade_do_paciente, genero
 
             match opcao_desejada :
                 case 1: 
-                    calcular_imc(peso_do_paciente, altura_do_paciente)
+                    calcular_imc(*dados_pacientes)
                     voltar_ao_menu = retorno_menu()
                 case 2: 
-                    altura_em_centimetros = altura_do_paciente * 100
-                    calcular_taxa_basal(peso_do_paciente, altura_em_centimetros, idade_do_paciente, genero_biologico)
+                    calcular_taxa_basal(*dados_pacientes)
                     voltar_ao_menu = retorno_menu()
                 case 3 :
                     print('Obrigado por utilizar o Unesc Saúde.')
