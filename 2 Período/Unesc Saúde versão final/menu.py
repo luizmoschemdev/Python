@@ -6,8 +6,8 @@ def coletar_dados():
     peso_do_paciente = float(input("Digite seu peso: "))
     idade_do_paciente = int(input("Digite sua idade (em anos): "))
     genero_biologico = input("Digite seu gênero biológico (M/F): ").upper()#coloca todas as letra em maiusculo
-    dados_pacientes =  [nome_do_paciente, altura_do_paciente, peso_do_paciente, idade_do_paciente, genero_biologico]
-    return
+    dados_pacientes =  [altura_do_paciente, peso_do_paciente, idade_do_paciente, genero_biologico]
+    return dados_pacientes
 
 def boas_vindas() :
     print("""Bem-vindo ao Unesc Saúde   
@@ -22,7 +22,7 @@ def retorno_menu ():
         else :
                     return True
         
-def mostrar_menu(*dados_pacientes):             
+def mostrar_menu(altura_do_paciente, peso_do_paciente, idade_do_paciente, genero_biologico):               
         voltar_ao_menu = True
         while voltar_ao_menu == True :
             print("""MENU
@@ -33,10 +33,11 @@ def mostrar_menu(*dados_pacientes):
 
             match opcao_desejada :
                 case 1: 
-                    calcular_imc(*dados_pacientes)
+                    calcular_imc(peso_do_paciente, altura_do_paciente)
                     voltar_ao_menu = retorno_menu()
                 case 2: 
-                    calcular_taxa_basal(*dados_pacientes)
+                    altura_em_centimetros = altura_do_paciente * 100
+                    calcular_taxa_basal(peso_do_paciente, altura_em_centimetros, idade_do_paciente, genero_biologico)
                     voltar_ao_menu = retorno_menu()
                 case 3 :
                     print('Obrigado por utilizar o Unesc Saúde.')
