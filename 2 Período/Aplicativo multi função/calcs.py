@@ -1,6 +1,8 @@
 def calculator():
 
-    op = int(input("Escolha a operação 1. SOMA 2. SUBTRAÇÃO 3. MULTIPLICAÇÃO 4. DIVISÃO "))
+    print("Escolha a operação 1. SOMA 2. SUBTRAÇÃO 3. MULTIPLICAÇÃO 4. DIVISÃO ")
+    op = int (input("Selecione a operação"))
+
     match op :
         case 1:
             n1 = float (input("Digite um número: "))
@@ -21,9 +23,9 @@ def calculator():
 
 def money_convertor():
 
-    option = int (input(print("""1. para dolar
+    option = int (input("""1. para dolar
                         2. para euro
-                    """)))  
+                    """)) 
     match option :
                 case 1 :
                     brazilian_coin = float (input("quantos reais você tem?"))
@@ -35,14 +37,14 @@ def money_convertor():
 def task_list ():
     
     tasks = []
-    tasks.append (input(print("digite as suas tarefas")))
+    tasks.append (input("digite as suas tarefas"))
     print (tasks)
     add_task = True
     while add_task == True:
-        adc = float (input(print ("deseja adicionar mais um elemento?")))
+        adc = float (input("deseja adicionar mais um elemento?"))
         match adc:
             case 1:
-                tasks.append (input(print("digite as suas tarefas")))
+                tasks.append (input("digite as suas tarefas"))
                 print (tasks)
             case 2: 
                 print ("Obrigado por usar o sistema de lista")

@@ -4,9 +4,9 @@ def welcome ():
     print ("Bem vindo ao aplicativo multitarefas.")
 
 def return_menu():
-    back_menu = input("Deseja voltar ao menu principal? S/N ")
+    back_menu = input("Deseja voltar ao menu principal? S/N ").upper
     match back_menu:
-        case "s" | "S":
+        case "S" | "s":
             return True
         case "N" | "n":
             return False
@@ -20,8 +20,8 @@ def show_menu():
                3. Lista de tarefas
                4. Jogo do número aleatório
                """)
-       op = int (input("Escolha uma opção. "))
-    match op:
+       option = int (input("Escolha uma opção."))
+    match option:
         case 1:
             calculator()
             go_back_menu = return_menu()
