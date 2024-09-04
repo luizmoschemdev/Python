@@ -1,4 +1,4 @@
-from calcs import calculator, money_convertor, task_list
+from calcs import calculator, money_convertor, task_list, secretNumber
 
 def welcome ():
     print ("Bem vindo ao aplicativo multitarefas.")
@@ -32,7 +32,7 @@ def show_menu():
                 task_list()
                 go_back_menu = return_menu()
             case 4:
-                print ("ta pronto n bb")
+                secretNumber()
                 go_back_menu = return_menu()
             case _:
                 print ("Opção inválida")

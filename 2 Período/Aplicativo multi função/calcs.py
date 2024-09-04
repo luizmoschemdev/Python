@@ -51,3 +51,24 @@ def task_list ():
             case 2: 
                 print ("Obrigado por usar o sistema de lista")
                 add_task = False
+
+def secretNumber():
+    import random
+
+    number = random.radint(1, 100)
+    attempts = 0
+    
+    print("Bem-vindo ao jogo do Número Secreto!")
+    print("Eu escolhi um número entre 1 e 100. Tente adivinhar!")
+    
+    while True:
+        guess = int(input("Digite o seu palpite: "))
+        attempts += 1
+        
+        if guess < number:
+            print("Muito baixo! Tente novamente.")
+        elif guess > number:
+            print("Muito alto! Tente novamente.")
+        else:
+            print(f"Parabéns! Você acertou o número secreto {number} em {attempts} tentativas.")
+            break
