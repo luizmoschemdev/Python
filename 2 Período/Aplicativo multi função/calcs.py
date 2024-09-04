@@ -55,7 +55,7 @@ def task_list ():
 def secretNumber():
     import random
 
-    number = random.radint(1, 100)
+    number = random.randint(1, 100)
     attempts = 0
     
     print("Bem-vindo ao jogo do Número Secreto!")
