@@ -9,18 +9,22 @@ def return_menu():
         case "S" | "s":
             return True
         case "N" | "n":
+            print("Obrigado por utilizar o programa multi função")
             return False
     
 def show_menu():
     go_back_menu = True
     while go_back_menu == True:
         print ("""Menu
-                1. Calculadora
-                2. Conversor de moedas
-                3. Lista de tarefas
-                4. Jogo do número aleatório
-                """)
+            1. Calculadora
+            2. Conversor de moedas
+            3. Lista de tarefas
+            4. Jogo do número aleatório
+            5. Sair
+            """)
+        
         option = int (input("Escolha uma opção."))
+        
         match option:
             case 1:
                 calculator()
@@ -34,5 +38,8 @@ def show_menu():
             case 4:
                 secretNumber()
                 go_back_menu = return_menu()
+            case 5:
+                print ("Obrigado por utilizar o programa multi função")
+                go_back_menu = False
             case _:
                 print ("Opção inválida")
