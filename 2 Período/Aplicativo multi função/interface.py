@@ -14,25 +14,25 @@ def return_menu():
 def show_menu():
     go_back_menu = True
     while go_back_menu == True:
-       print ("""Menu
-               1. Calculadora
-               2. Conversor de moedas
-               3. Lista de tarefas
-               4. Jogo do número aleatório
-               """)
-       option = int (input("Escolha uma opção."))
-    match option:
-        case 1:
-            calculator()
-            go_back_menu = return_menu()
-        case 2:
-            money_convertor()
-            go_back_menu = return_menu()
-        case 3:
-            task_list()
-            go_back_menu = return_menu()
-        case 4:
-            print ("ta pronto n bb")
-            go_back_menu = return_menu()
-        case _:
-            print ("Opção inválida")
+        print ("""Menu
+                1. Calculadora
+                2. Conversor de moedas
+                3. Lista de tarefas
+                4. Jogo do número aleatório
+                """)
+        option = int (input("Escolha uma opção."))
+        match option:
+            case 1:
+                calculator()
+                go_back_menu = return_menu()
+            case 2:
+                money_convertor()
+                go_back_menu = return_menu()
+            case 3:
+                task_list()
+                go_back_menu = return_menu()
+            case 4:
+                print ("ta pronto n bb")
+                go_back_menu = return_menu()
+            case _:
+                print ("Opção inválida")
