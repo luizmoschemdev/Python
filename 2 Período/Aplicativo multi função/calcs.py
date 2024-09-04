@@ -1,25 +1,34 @@
 def calculator():
+    
+    operation = True
+    while operation == True:
+        print("Escolha a operação 1. Adição 2. Subtração 3. Multiplicação 4. Divisão")
+        op = int (input("Selecione a operação: "))
 
-    print("Escolha a operação 1. SOMA 2. SUBTRAÇÃO 3. MULTIPLICAÇÃO 4. DIVISÃO ")
-    op = int (input("Selecione a operação"))
+        match op :
+            case 1:
+                n1 = float (input("Digite um número: "))
+                n2 = float (input("Digite um número: "))
+                print (n1 + n2) 
+                again = input("Deseja usar a calculadora novamente? (S/N): ").upper()
+                if again == "S" | "s":
+                    return True
+                else:
+                    return False
+                
 
-    match op :
-        case 1:
-            n1 = float (input("Digite um número: "))
-            n2 = float (input("Digite um número: "))
-            print (n1 + n2) 
-        case 2: 
-            n1 = float (input("Digite um número: "))
-            n2 = float (input("Digite um número: "))
-            print (n1 - n2) 
-        case 3:
-            n1 = float (input("Digite um número: "))
-            n2 = float (input("Digite um número: "))
-            print (n1 * n2) 
-        case 4:
-            n1 = float (input("Digite um número: "))
-            n2 = float (input("Digite um número: "))
-            print (n1 / n2) 
+            case 2: 
+                n1 = float (input("Digite um número: "))
+                n2 = float (input("Digite um número: "))
+                print (n1 - n2) 
+            case 3:
+                n1 = float (input("Digite um número: "))
+                n2 = float (input("Digite um número: "))
+                print (n1 * n2) 
+            case 4:
+                n1 = float (input("Digite um número: "))
+                n2 = float (input("Digite um número: "))
+                print (n1 / n2) 
 
 def money_convertor():
 
@@ -39,17 +48,17 @@ def money_convertor():
 def task_list ():
     
     tasks = []
-    tasks.append (input("Digite as suas tarefas"))
+    tasks.append (input("Digite uma tarefa: "))
     print (tasks)
     add_task = True
     while add_task == True:
-        adc = float (input("Deseja adicionar mais um elemento?"))
+        adc = float (input("Deseja adicionar mais alguma tarefa? (S/N): "))
         match adc:
-            case 1:
-                tasks.append (input("Digite as suas tarefas"))
+            case "S" | "s":
+                tasks.append (input("Digite uma tarefa: "))
                 print (tasks)
-            case 2: 
-                print ("Obrigado por usar o sistema de lista")
+            case "N" | "n": 
+                print ("Obrigado por usar o sistema de lista.")
                 add_task = False
 
 def secretNumber():

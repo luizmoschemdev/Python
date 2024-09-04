@@ -4,12 +4,12 @@ def welcome ():
     print ("Bem vindo ao aplicativo multitarefas.")
 
 def return_menu():
-    back_menu = input("Deseja voltar ao menu principal? S/N ").upper
+    back_menu = input("Deseja voltar ao menu principal? (S/N): ").upper()
     match back_menu:
         case "S" | "s":
             return True
         case "N" | "n":
-            print("Obrigado por utilizar o programa multi função")
+            print("Obrigado por utilizar o programa multi função.")
             return False
     
 def show_menu():
@@ -23,7 +23,7 @@ def show_menu():
             5. Sair
             """)
         
-        option = int (input("Escolha uma opção."))
+        option = int (input("Escolha uma opção. "))
         
         match option:
             case 1:
@@ -39,7 +39,7 @@ def show_menu():
                 secretNumber()
                 go_back_menu = return_menu()
             case 5:
-                print ("Obrigado por utilizar o programa multi função")
+                print ("Obrigado por utilizar o programa multi função.")
                 go_back_menu = False
             case _:
-                print ("Opção inválida")
+                print ("Opção inválida.")
