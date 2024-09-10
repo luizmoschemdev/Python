@@ -3,6 +3,14 @@ from calcs import calculator, money_convertor, task_list, secretNumber
 def welcome ():
     print ("Bem vindo ao aplicativo multitarefas.")
 
+def use_calc_again ():
+   back_calc = input("Deseja usar a calculadora novamente? (S/N): ").upper()
+   match back_calc:
+    case "S" | "s":
+        return True
+    case "N" | "n":
+        return False
+
 def return_menu():
     back_menu = input("Deseja voltar ao menu principal? (S/N): ").upper()
     match back_menu:

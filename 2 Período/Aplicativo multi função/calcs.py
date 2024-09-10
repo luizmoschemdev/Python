@@ -1,3 +1,4 @@
+from interface import use_calc_again
 def calculator():
     
     operation = True
@@ -10,12 +11,7 @@ def calculator():
                 n1 = float (input("Digite um número: "))
                 n2 = float (input("Digite um número: "))
                 print (n1 + n2) 
-                again = input("Deseja usar a calculadora novamente? (S/N): ").upper()
-                if again == "S" | "s":
-                    return True
-                else:
-                    return False
-                
+                operation = use_calc_again()
 
             case 2: 
                 n1 = float (input("Digite um número: "))
