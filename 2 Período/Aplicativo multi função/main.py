@@ -1,4 +1,4 @@
-from interface import welcome, show_menu, use_calc_again
+from interface import welcome, show_menu
 
 def main():
     welcome()

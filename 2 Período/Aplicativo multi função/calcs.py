@@ -1,9 +1,21 @@
-from interface import use_calc_again
+def use_calc_again ():
+   back_calc = (input("Deseja usar a calculadora novamente? (S/N): ")).upper()
+   match back_calc:
+    case "S" | "s":
+        return True
+    case "N" | "n":
+        return False
+
 def calculator():
     
     operation = True
     while operation == True:
-        print("Escolha a operação 1. Adição 2. Subtração 3. Multiplicação 4. Divisão")
+        print("""Escolha a operação: 
+            1. Adição 
+            2. Subtração 
+            3. Multiplicação 
+            4. Divisão
+            """)
         op = int (input("Selecione a operação: "))
 
         match op :
@@ -17,14 +29,19 @@ def calculator():
                 n1 = float (input("Digite um número: "))
                 n2 = float (input("Digite um número: "))
                 print (n1 - n2) 
+                operation = use_calc_again()
+            
             case 3:
                 n1 = float (input("Digite um número: "))
                 n2 = float (input("Digite um número: "))
-                print (n1 * n2) 
+                print (n1 * n2)
+                operation = use_calc_again() 
+
             case 4:
                 n1 = float (input("Digite um número: "))
                 n2 = float (input("Digite um número: "))
                 print (n1 / n2) 
+                operation = use_calc_again()
 
 def money_convertor():
 
@@ -41,14 +58,14 @@ def money_convertor():
                     brazilian_coin = float (input("Quantos reais você tem? "))
                     print(f"sua conversao é {brazilian_coin / 6.23} EU")
 
-def task_list ():
+def task_list (): #cria função da lista
     
-    tasks = []
-    tasks.append (input("Digite uma tarefa: "))
+    tasks = [] #cria uma varíável com a lista
+    tasks.append (input("Digite uma tarefa: ")) #adiciona um elemento a lista
     print (tasks)
-    add_task = True
+    add_task = True #looping para poder adicionar mais elemento a lista
     while add_task == True:
-        adc = float (input("Deseja adicionar mais alguma tarefa? (S/N): "))
+        adc = input("Deseja adicionar mais alguma tarefa? (S/N): ")
         match adc:
             case "S" | "s":
                 tasks.append (input("Digite uma tarefa: "))
