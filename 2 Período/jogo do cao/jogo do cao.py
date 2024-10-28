@@ -51,9 +51,9 @@ def return_back_menu():
             print("Opção inválida, voltando ao menu.")
             return True
 def menu():
-    dog1 = None 
+    dog1 = None
     menu_loop = True
-    while menu_loop:
+    while menu_loop == True:
         print ("""
 Bem vindo ao jogo do cão!
 1. Regras e dicas
@@ -62,20 +62,21 @@ Bem vindo ao jogo do cão!
 4. Brincar com seu pet
 5. Alimentar seu pet 
 6. Sair
-            """)
-    option = int (input("Escolha uma opção: "))
-    match option:
+        """)
+        option = int (input("Escolha uma opção: "))
+        match option:
             case 1:
                 os.system('cls')
                 print ("""
 Leia as regras com atenção!
 1. Você precisa de dar um nome e indicar a raça do cachorro para poder jogar, use o menu de criação.
-2. Fique atento com a fome do seu cachorro, cada vez que você brinca com ele, ele ganha fica com fome, ao chegar em certo ponto ele morre.
-3. Você pode evitar a morte do seu cachorro alimentando ele na seçaõ de alimentação.1
+2. Fique atento com a fome do seu cachorro, cada vez que você brinca ele vai ficando faminto até chegar o ponto de morrer.
+3. Você pode evitar a morte do seu cachorro alimentando ele na seção de alimentação.
                 """)
             case 2:
                 os.system('cls')
                 dog1 = dog (input("Digite o nome do seu cachorro:"))
+                race = input("Qual a raça do seu cão?")                
             case 3: 
                 os.system('cls')
                 if dog1:
@@ -100,8 +101,9 @@ Leia as regras com atenção!
                 print("Obrigado por jogar o Jogo do Cão!")
                 menu_loop = False
             case _:
-                print ("Opção inválida.")
+                print ("Opção inválida.")               
+menu()
 
-                    
+                        
 
 
