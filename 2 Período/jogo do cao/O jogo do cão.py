@@ -1,6 +1,6 @@
 import os
 
-class dog: 
+class Dog: 
     def __init__(self, name):
         self.is_on = False
         self.name = name
@@ -33,11 +33,15 @@ class dog:
             print (f"O {self.name} está dormindo, acorde ele para brincar!") 
 
     def food(self):
-        fooding = int (input("Pressione 1 para poder dar um petisco para seu pet"))
-        if fooding == 1:
-            print(f"Você alimentou o {self.name}.")
-            self.hunger -= 2
-            self.hunger = max(0, self.hunger - 2) #isso previne que a fome caia abaixo de 0
+        try:
+            fooding = int (input("Pressione 1 para poder dar um petisco para seu pet"))
+            if fooding == 1:
+                print(f"Você alimentou o {self.name}.")
+                self.hunger -= 2
+                self.hunger = max(0, self.hunger - 2) #isso previne que a fome caia abaixo de 0
+        except ValueError:
+            print ("Carácteres inválidos, digite um caráctere válido.")      
+            
 
 def return_back_menu():
     return_menu = input("Deseja voltar ao menu? (s/n)").upper()
@@ -75,8 +79,8 @@ Leia as regras com atenção!
                 """)
             case 2:
                 os.system('cls')
-                dog1 = dog (input("Digite o nome do seu cachorro:"))
-                race = input("Qual a raça do seu cão?")                
+                dog1 = Dog (input("Digite o nome do seu cachorro:"))
+                race = input("Qual a raça do seu cachorro? ")    
             case 3: 
                 os.system('cls')
                 if dog1:

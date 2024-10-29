@@ -14,3 +14,14 @@ except ZeroDivisionError:
     print ("Nois n divide zero nao animal")
 finally:
     print ("Valeu por usar o programa")
+
+def obter_nome():
+    while True:
+        nome = input("Digite seu nome: ")
+        if nome.isalpha():
+            return nome
+        else:
+            print("Nome inválido. Digite apenas letras.")
+
+nome_usuario = obter_nome()
+print("Olá,", nome_usuario + "!")
