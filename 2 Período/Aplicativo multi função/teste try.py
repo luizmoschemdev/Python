@@ -25,3 +25,15 @@ def obter_nome():
 
 nome_usuario = obter_nome()
 print("Olá,", nome_usuario + "!")
+
+def return_back_menu():
+    return_menu = input("Deseja voltar ao menu? (S/N)").upper()
+    match return_menu:
+        case "s" | "S" | "Sim" | "sIm" | "siM":
+            return True
+        case "n" | "N" | "Não" | "Nao" | "nao" | "nÃo" | "nÂo":
+            print("Obrigado por jogar o Jogo do cão!")
+            return False
+        case _:
+            print("Opção inválida, voltando ao menu.")
+            return True
